@@ -8,11 +8,11 @@ public class PatternView {
 	public static final int STATUS_LOCK_PATTERN_VERFIED = 2;
 	public static final int STATUS_LOCK_PATTERN_VERFIED_FAILED = 3;
 
-	private LockPattern mActivity = null;
+	private DetectorPatrones mActivity = null;
 
 	protected TextView mTipTextView = null;
 
-	public PatternView(LockPattern activity) {
+	public PatternView(DetectorPatrones activity) {
 		mActivity = activity;
 		//
 		mActivity.setContentView(R.layout.pattern_layout);

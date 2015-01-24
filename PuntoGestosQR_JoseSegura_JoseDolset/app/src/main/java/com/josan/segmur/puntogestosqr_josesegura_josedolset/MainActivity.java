@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014, 2015 - Antonio Doncel Campos <adoncel@correo.ugr.es>, Hugo Mario Lupi�n Fern�ndez <hugolupionfernandez@correo.ugr.es>
+ *  Copyright (C) 2014, 2015 - Jose Angel Segura Muros <shaljas@correo.ugr.es>, Jose Delgado Dolset <jdeldo@gmail.com>
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,9 +15,10 @@
  */
 
 /**
- * Clase principal para la ejecuci�n del lector de c�digos QR
- * @author: Antonio Doncel Campos, Hugo Mario Lupi�n Fern�ndez
- * @version: 28/12/14-0
+ * Actividad principal para la aplicación que acepta un patron de movimiento y lee un codigo QR
+ * @author: Jose Angel Segura Muros, Jose Delgado Dolset
+ * @version: 1.0
+ * @date: 25/01/2015
  */
 
 package com.josan.segmur.puntogestosqr_josesegura_josedolset;
@@ -28,39 +29,40 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-//implements GestureDetector.OnGestureListener,
-//GestureDetector.OnDoubleTapListener
-
+/**
+ * Clase principal de la actividad
+ */
 public class MainActivity extends Activity {
 	
 	/**
-     * Boton que lanzara la segunda actividad
+     * Boton que inicia la aplicacion
      */
-	public Button button_qreader;
-	
-	//private static final String DEBUG_TAG = "Gestures";
-	//private GestureDetectorCompat mDetector;
-	
+	public Button launch_Button;
+
+    /**
+     * Metodo de la creacion de la actividad, inicializa los componentes de la misma
+     * @param savedInstanceState
+     */
 	@Override
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button_qreader = (Button) findViewById(R.id.qrreader_button);
-        button_qreader.setOnClickListener(new View.OnClickListener() {
+        launch_Button = (Button) findViewById(R.id.qrreader_button);
+        launch_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            	lanzar_QRReader(v);
+            	ejecutaDP(v);
             }
         });
     }
 
 	/**
-     * M�todo para ejecturar otra actividad
+     * Metodo para la ejecucion de DetectorPatrones
      */
-	public void lanzar_QRReader(View view) {
-        Intent i = new Intent(this, LockPattern.class );
+	public void ejecutaDP(View view) {
+        Intent i = new Intent(this, DetectorPatrones.class );
         startActivity(i);
 	}
 }
