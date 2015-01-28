@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    tools:context="NPI.P4.puntofotobrujula_josedelgado_joseangelsegura.Brujula" >
+
+    <ImageButton
+        android:id="@+id/O_Button"
+        android:layout_width="49dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickO_Button"
+        android:src="@drawable/o" />
+
+    <LinearLayout
+        android:id="@+id/Internos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/N_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:onClick="onClickN_Button"
+            android:src="@drawable/n" />
+
+        <RelativeLayout
+            android:layout_width="208dp"
+            android:layout_height="392dp"
+            android:background="@drawable/fondo" >
+
+            <ImageView
+                android:id="@+id/Aguja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/aguja" />
+
+            <ImageButton
+                android:id="@+id/NE_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:onClick="onClickNE_Button"
+                android:src="@drawable/ne" />
+
+            <ImageButton
+                android:id="@+id/SO_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:background="@android:color/transparent"
+                android:onClick="onClickSO_Button"
+                android:src="@drawable/so" />
+
+            <ImageButton
+                android:id="@+id/SE_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:onClick="onClickSE_Button"
+                android:src="@drawable/se" />
+
+            <ImageButton
+                android:id="@+id/NO_Button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@id/NE_Button"
+                android:background="@android:color/transparent"
+                android:onClick="onClickNO_Button"
+                android:src="@drawable/no" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/S_Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:baselineAlignBottom="true"
+            android:cropToPadding="true"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:onClick="onClickS_Button"
+            android:src="@drawable/s" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/E_Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickE_Button"
+        android:src="@drawable/e" />
+
+</LinearLayout>
